@@ -6,6 +6,6 @@ export default class DiscordBot {
   }
 
   start() {
-    this.client.login('NDIzNDExMjgxMTAyNjM1MDA4.DYp8BA.qgg8QaxGMyK7WZg_jG_vrWL8plo')
+    this.client.login(process.env.DISCORD_TOKEN)
   }
 }
