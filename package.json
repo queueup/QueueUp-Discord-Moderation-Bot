@@ -1,0 +1,30 @@
+{
+	"name": "QueueUp-Discord-Moderation-Bot",
+	"version": "0.1.0",
+	"private": true,
+	"main": "dist/index.js",
+	"scripts": {
+		"watch": "noderize-scripts watch",
+		"build": "noderize-scripts build",
+		"start": "noderize-scripts start",
+		"format": "noderize-scripts format",
+		"test": "noderize-scripts test",
+		"lint": "eslint src/* --fix",
+		"clean": "noderize-scripts clean"
+	},
+	"devDependencies": {
+		"@noderize/scripts": "^0.4.1",
+		"babel-eslint": "^8.2.2",
+		"babel-preset-es": "^1.0.0",
+		"eslint": "^4.19.0",
+		"eslint-config-airbnb-base": "^12.1.0",
+		"eslint-plugin-import": "^2.9.0"
+	},
+	"dependencies": {
+		"@noderize/runtime": "^0.4.1",
+		"chalk": "^2.3.2",
+		"discord.js": "^11.3.2",
+		"dotenv": "^5.0.1",
+		"pm2": "^2.10.1"
+	}
+}

@@ -1,0 +1,38 @@
+[
+  {
+    "command": "bugreport",
+    "description": "Interact with bug reports",
+    "actions": [
+      {
+        "description": "Create a new bug report",
+        "notes": "You can attach an image if needed",
+        "params": [
+          {
+            "name": "platform",
+            "type": "enum", 
+            "values": ["android", "ios"]
+          },
+          "bug description"
+        ]
+      }
+    ]
+  },
+  {
+    "command": "userreport",
+    "description": "Report users",
+    "actions": [
+      {
+        "description": "Create a new user report",
+        "notes": "",
+        "params": [
+          {
+            "name": "region",
+            "type": "enum", 
+            "values": ["EUW", "NA", "BR", "..."]
+          },
+          "summoner name"
+        ]
+      }
+    ]
+  }
+]
