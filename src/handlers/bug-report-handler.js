@@ -3,10 +3,6 @@ import { RichEmbed } from 'discord.js'
 
 import DefaultHandler from './default-handler'
 
-import {
-  androidReportChannelId,
-  iosReportChannelId,
-} from '../config'
 import { red } from '../helpers/colors'
 
 export default class BugReportHandler extends DefaultHandler {
@@ -43,10 +39,10 @@ export default class BugReportHandler extends DefaultHandler {
       .join(' ')
     switch (platform) {
       case 'android':
-        channelId = androidReportChannelId
+        channelId = process.env.ANDROID_REPORT_CHANNEL
         break
       case 'ios':
-        channelId = iosReportChannelId
+        channelId = process.env.IOS_REPORT_CHANNEL
         break
       default:
         return

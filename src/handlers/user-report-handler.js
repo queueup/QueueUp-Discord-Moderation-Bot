@@ -2,8 +2,6 @@ import chalk from 'chalk'
 
 import DefaultHandler from './default-handler'
 
-import { userReportChannelId } from '../config'
-
 export default class UserReportHandler extends DefaultHandler {
   constructor(client) {
     super(client)
@@ -34,7 +32,7 @@ export default class UserReportHandler extends DefaultHandler {
     ] = splitContent.splice(0, 1)
     const summonerName = splitContent.join(' ')
 
-    guild.channels.get(userReportChannelId).send(`<@${author.id}> just reported \`${summonerName}\` from ${region}`)
+    guild.channels.get(process.env.USER_REPORT_CHANNEL).send(`<@${author.id}> just reported \`${summonerName}\` from ${region}`)
     message.author.send(`Your report about \`${summonerName}\` has been sent. We might get in touch with you soon to learn more about it.`)
 
     message.delete()
