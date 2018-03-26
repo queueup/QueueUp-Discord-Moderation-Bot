@@ -37,8 +37,8 @@ export default class ApprovalHandler extends DefaultHandler {
             channel.send(description,
                 new RichEmbed({
                     author: {
-                        name: author.username,
                         icon_url: author.avatarURL,
+                        name: author.username,
                     },
                     color: blue,
                     description: question,
