@@ -2,6 +2,7 @@ import chalk from 'chalk'
 import {RichEmbed} from 'discord.js'
 
 import DefaultHandler from './default-handler'
+
 import {blue} from '../helpers/colors'
 
 export default class ApprovalHandler extends DefaultHandler {
@@ -35,15 +36,15 @@ export default class ApprovalHandler extends DefaultHandler {
             message.delete()
             channel.send(description,
                 new RichEmbed({
-                    description: question,
                     author: {
                         name: author.username,
                         icon_url: author.avatarURL,
                     },
-                    color: blue
-                })).then((message) => {
-                message.react("👍")
-                message.react("👎")
+                    color: blue,
+                    description: question,
+                })).then((botMessage) => {
+                botMessage.react("👍")
+                botMessage.react("👎")
             }).catch((error) => {
                 channel.send('Oops ! Something went wrong while executing your request ...')
                 console.log(chalk.red(error))
