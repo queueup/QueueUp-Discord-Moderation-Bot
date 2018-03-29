@@ -34,5 +34,18 @@
         ]
       }
     ]
+  },
+  {
+    "command": "approve",
+    "description": "Ask a binary question",
+    "actions": [
+      {
+        "description": "Creates a message with a 👍 and a 👎 reaction",
+        "notes": "",
+        "params": [
+          "question"
+        ]
+      }
+    ]
   }
 ]
